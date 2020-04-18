@@ -1,0 +1,47 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+  <title>WikiArticle</title>
+</head>
+<body>
+  <div class="container">
+    <div class="form-holder">
+      <form onsubmit="fetchArticle(event)" class="form">
+        <div class="form-group">
+          <label for="">Article Title</label>
+          <input type="text" id="article" placeholder="Enter Article Title" required>
+        </div>
+        <div class="form-group">
+          <label for="">Language</label>
+          <select name="" id="lang" onchange="fetchArticle(event)">
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+            <option value="es">Español</option>
+            <option value="zh">中文</option>
+            <option value="it">Italiano</option>
+            <option value="ru">Русский</option>
+            <option value="pt">Português</option>
+            <option value="pl">Polski</option>
+            <option value="ar">العربية</option>
+            <option value="ja">日本語</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <button type="submit" id="">
+            Fetch
+          </button>
+          <span id="loader"></span>
+        </div>
+      </form>
+    </div>
+    <div class="content-display">
+      <ul id="table-of-content">
+      </ul>
+      <div id='textHold'></div>
+    </div>
+  </div>
+</body>
+<script src="./index.js"></script>
+</html>
